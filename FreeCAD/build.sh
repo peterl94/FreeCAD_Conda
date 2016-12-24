@@ -1,6 +1,6 @@
 mkdir $PREFIX/lib/freecad -p
 
-set >/home/fc_builder/Desktop/var.txt
+
 VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -48,7 +48,7 @@ VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TEMPLATE=YES \
       -DBUILD_TEST=YES \
       -DBUILD_VR=NO \
-      -DBUILD_WEB=YES .
+      -DBUILD_WEB=YES ~/projects/FreeCAD
 
 make -j3 2>&1 | tee output.txt
 make install
