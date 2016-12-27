@@ -6,9 +6,6 @@ build:
     number: 0
     name: py_3
 
-source:
-    path: ../../FreeCAD
-
     patches:
         # - none
 
