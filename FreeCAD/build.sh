@@ -1,3 +1,4 @@
+FREECAD_SOURCE=~/projects/FreeCAD # this is the path to the FreeCAD source (modyfy to your needs)
 mkdir $PREFIX/lib/freecad -p
 
 
@@ -48,7 +49,7 @@ VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Debug \
       -DBUILD_TEMPLATE=YES \
       -DBUILD_TEST=YES \
       -DBUILD_VR=NO \
-      -DBUILD_WEB=YES ~/projects/FreeCAD
+      -DBUILD_WEB=YES ${FREECAD_SOURCE}
 
 make -j3 2>&1 | tee output.txt
 make install
