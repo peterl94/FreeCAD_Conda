@@ -1,7 +1,8 @@
+FREECAD_SOURCE=~/projects/FreeCAD # this is the path to the FreeCAD source (modyfy to your needs)
 mkdir $PREFIX/lib/freecad -p
 
-set >/home/fc_builder/Desktop/var.txt
-VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Release \
+
+VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_PREFIX_PATH=$PREFIX \
       -DNETGENDATA=$PREFIX/include/netgen/libsrc \
@@ -48,7 +49,7 @@ VERBOSE=1 cmake -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TEMPLATE=YES \
       -DBUILD_TEST=YES \
       -DBUILD_VR=NO \
-      -DBUILD_WEB=YES .
+      -DBUILD_WEB=YES ${FREECAD_SOURCE}
 
 make -j3 2>&1 | tee output.txt
 make install
