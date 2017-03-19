@@ -22,16 +22,14 @@ requirements:
     build:
         - cmake
         - ninja  # [win]
-        - python # [unix]
-        - python 3.5.3 0 # [win]
+        - python
         - occt
         - pybind11
-        - tk     # [unix]
+        - tk
     run:
         - occt
         - python
-        - tk     # [unix]
-
+        - tk
 about:
     home: https://sourceforge.net/projects/netgen-mesher/
     license: LGPL
