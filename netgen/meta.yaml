@@ -12,7 +12,7 @@ build:
 
 source:
     git_url: https://github.com/looooo/netgen
-    git_tag: netgen6.2
+    git_tag: 6.2rebased
 
     track_features:
         - vc14                                # [win and py35]
@@ -21,14 +21,16 @@ source:
 requirements:
     build:
         - cmake
-        - python
+        - ninja  # [win]
+        - python # [unix]
+        - python 3.5.3 0 # [win]
         - occt
         - pybind11
-        - tk
+        - tk     # [unix]
     run:
         - occt
         - python
-        - tk
+        - tk     # [unix]
 
 about:
     home: https://sourceforge.net/projects/netgen-mesher/
