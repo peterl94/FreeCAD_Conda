@@ -128,3 +128,14 @@ eval "$(register-python-argcomplete conda)"
 ```
 anaconda login
 ```
+
+
+## compile dependences 
+
+- occt
+- coin
+- pivy
+- libMed
+- netgen
+- pyside-tools
+- freecad
